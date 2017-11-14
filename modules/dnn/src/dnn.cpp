@@ -851,7 +851,7 @@ struct Net::Impl
         int id = getLayerId(layerName);
 
         if (id < 0)
-            CV_Error(Error::StsError, "Requsted layer \"" + layerName + "\" not found");
+            CV_Error(Error::StsError, "Requested layer \"" + layerName + "\" not found");
 
         return getLayerData(id);
     }
@@ -1543,7 +1543,7 @@ struct Net::Impl
         if ((size_t)pin.oid >= ld.outputBlobs.size())
         {
             CV_Error(Error::StsOutOfRange, "Layer \"" + ld.name + "\" produce only " + toString(ld.outputBlobs.size()) +
-                                           " outputs, the #" + toString(pin.oid) + " was requsted");
+                                           " outputs, the #" + toString(pin.oid) + " was requested");
         }
         if (preferableBackend != DNN_TARGET_CPU)
         {
